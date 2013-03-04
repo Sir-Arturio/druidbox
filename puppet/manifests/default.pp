@@ -77,34 +77,6 @@ class development {
   }
 }
 
-class symfony-standard {
-
-  exec { 'git clone symfony standard':
-    command => 'git clone https://github.com/symfony/symfony-standard.git /vagrant/www/symfony',
-    creates => "/vagrant/www/symfony"
-  }
-
-  exec { 'install composer for symfony when needed':
-    command => 'curl -s http://getcomposer.org/installer | php -- --install-dir=/vagrant/www/symfony',
-    onlyif  => "test -e /vagrant/www/symfony/composer.json",
-  }
-
-  exec { 'run composer for symfony when composer is used':
-    command => 'php composer.phar --verbose install',
-    cwd => "/vagrant/www/symfony",
-    onlyif  => "test -e /vagrant/www/symfony/composer.json",
-    timeout => 0,
-    tries   => 10,
-    require => Exec['install composer for symfony when needed'],
-  }
-
-  exec { 'run vendor installation from deps when composer is not used':
-    command => 'php bin/vendors update',
-    cwd => "/vagrant/www/symfony",
-    unless  => "test -e /vagrant/www/symfony/composer.json",
-  }
-}
-
 class devbox_php_fpm {
 
     php::module { [
@@ -186,6 +158,5 @@ class {'mongodb':
 
 include phpqatools
 include development
-include symfony-standard
 
 
