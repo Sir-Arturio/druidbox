@@ -28,6 +28,3 @@
 [submodule "puppet/modules/php"]
 	path = puppet/modules/php
 	url = https://github.com/saz/puppet-php.git
-[submodule "puppet/modules/drush"]
-	path = puppet/modules/drush
-	url = git://github.com/jvc26/puppet-drush.git
