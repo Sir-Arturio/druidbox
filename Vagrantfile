@@ -32,7 +32,7 @@ Vagrant::Config.run do |config|
   config.vm.forward_port 80, 8080       #apache
   config.vm.forward_port 81, 8181       #nginx
   config.vm.forward_port 27017, 27017   #mongodb
-  config.vm.forward_port 3306, 3306     #mysql
+  config.vm.forward_port 3306, 3307     #mysql
 
   # Share an additional folder to the guest VM. The first argument is
   # an identifier, the second is the path on the guest to mount the
