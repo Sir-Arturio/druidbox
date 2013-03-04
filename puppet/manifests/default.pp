@@ -66,11 +66,6 @@ class development {
     require => Package["npm"],
   }
 
-  exec { 'install capifony using RubyGems':
-    command => 'gem install capifony',
-    require => Package["rubygems"],
-  }
-
   exec { 'install capistrano_rsync_with_remote_cache using RubyGems':
     command => 'gem install capistrano_rsync_with_remote_cache',
     require => Package["capistrano"],
@@ -158,5 +153,5 @@ class {'mongodb':
 
 include phpqatools
 include development
-
+include drush
 
