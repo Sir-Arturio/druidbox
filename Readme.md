@@ -1,4 +1,4 @@
-Set up a PHP development box super fast
+Set up a Drupal development box super fast
 =======================================
 
 Installation
@@ -9,7 +9,7 @@ Installation
 * Clone this repository
 * Install submodules with ```git submodule update --init```
 * After running ```vagrant up``` the box is set up using Puppet
-* You should now have your working Symfony2 Standard Edition under http://localhost:8181/app_dev.php (You have to uncomment or remove some lines at the beginning of web/app_dev.php that restrict access to this file. Is no risk as you should not deploy that file to prodution anyway.)
+* Done!
 
 Installed components
 --------------------
@@ -22,11 +22,10 @@ Installed components
 * [Node.js](http://nodejs.org/)
 * [npm](http://npmjs.org/)
 * [less](http://lesscss.org/)
-* [Symfony2 Standard Edition](https://github.com/symfony/symfony-standard)
+* [drush](http://drush.org/)
 * [MySQL](http://dev.mysql.com/downloads/mysql/) using puppet module (https://github.com/example42/puppet-mysql)
 * [MongoDB](http://www.mongodb.org/) using puppet module (https://github.com/puppetlabs/puppetlabs-mongodb)
 * [Capistrano](https://github.com/capistrano/capistrano)
-* [capifony](http://capifony.org/)
 * Most of the [phpqatools](http://www.phpqatools.org) using puppet module (https://github.com/rafaelfelix/puppet-phpqatools)
 * [xdebug](http://xdebug.org/)
 
