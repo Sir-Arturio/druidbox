@@ -103,4 +103,7 @@ Vagrant::Config.run do |config|
 
   # allow symlinks in vm
   config.vm.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
+
+  # Forward SSH keys
+  config.ssh.forward_agent = true
 end
